@@ -7,7 +7,10 @@
 1.19.4
 
 ## 何ができるのか
-実行したエンティティから指定したターゲットまでの最短経路探索をします。フェンスゲートの開閉など、たくさんのブロックに対応しています。
+実行したエンティティから指定したターゲットまでの最短経路探索をします。
+
+フェンスゲートの開閉など、たくさんのブロックに対応しています。
+
 ![PathFinder](https://user-images.githubusercontent.com/69749831/233824159-19d66772-9d97-4baf-827b-19f88a4619e7.png)
 
 ## 使い方
@@ -32,6 +35,21 @@ execute as @p run function #pf:path_finder
 ```
 
 **※「#pf:once_path_finder」と「#pf:path_finder」ファンクションを実行すると「pf.target」タグは消えるので注意してください。**
+
+- **例**
+- 
+全てのニワトリから一番近くにいるアーマースタンドまでの経路探索
+
+```mcfunction
+## test1 function（このファンクションを常時実行する）
+execute as @e[type=chicken] at @s run function example:test2
+```
+
+```mcfunction
+## test2 function
+tag @e[type=armor_stand, limit=1, sort=nearest] add pf.target
+function #pf:path_finder
+```
 
 - **設定**
 
