@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "tag": "minecraft:slabs",
+            "state": {
+                "type": "bottom"
+            }
+        }
+    }
+}
