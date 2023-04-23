@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "tag": "minecraft:fence_gates",
+            "state": {
+                "open": false
+            }
+        }
+    }
+}
