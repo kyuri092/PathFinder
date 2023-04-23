@@ -43,6 +43,9 @@ execute as @p run function #pf:path_finder
 ```mcfunction
 ## test1 function（このファンクションを常時実行する）
 execute as @e[type=chicken] at @s run function example:test2
+
+# パーティクルで経路を可視化
+execute at @e[tag=pf.M] run particle dust 1 0 0 0.5 ~ ~ ~ 0 0 0 0 1
 ```
 
 ```mcfunction
@@ -52,7 +55,7 @@ function #pf:path_finder
 ```
 
 - **順番**
-経路探索を行うと、「pf.M」タグを持ったマーカーが召喚されます。各マーカーの「pf.path」スコアが順番となっています。他のエンティティのマーカーとは「pf.ownerId」スコアと、実行したエンティティが持つ「pf.id」スコアが一致しているかどうかで区別できます。
+経路探索を行うと、「pf.M」タグを持ったマーカーが召喚されます。各マーカーの「pf.path」スコアが順番となっています。他のエンティティのマーカーとは、「pf.ownerId」スコアと実行したエンティティが持つ「pf.id」スコアが一致しているかどうかで区別できます。
 
 - **設定**
 
