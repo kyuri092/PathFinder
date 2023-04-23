@@ -51,6 +51,9 @@ tag @e[type=armor_stand, limit=1, sort=nearest] add pf.target
 function #pf:path_finder
 ```
 
+- **順番**
+経路探索を行うと、「pf.M」タグを持ったマーカーが召喚されます。各マーカーの「pf.path」スコアが順番となっています。他のエンティティのマーカーとは「pf.ownerId」スコアと、実行したエンティティが持つ「pf.id」スコアが一致しているかどうかで区別できます。
+
 - **設定**
 
 「PathFinder-vx.x.x\data\pf\functions\options\load.mcfunction」から固定スコアを設定できます。各スコアやエンティティ毎に設定できるスコアの説明は、中のコメント文を参照してください。
