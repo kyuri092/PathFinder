@@ -36,7 +36,7 @@ execute as @p run function #pf:path_finder
 
 **※「#pf:once_path_finder」と「#pf:path_finder」ファンクションを実行すると「pf.target」タグは消えるので注意してください。**
 
-- **Example**
+- **使用例**
 
 全てのニワトリから一番近くにいるアーマースタンドまでの経路探索
 
